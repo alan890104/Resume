@@ -1,0 +1,262 @@
+%-------------------------
+% Resume in Latex
+% Author : Harshibar
+% Based off of: https://github.com/jakeryang/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+% only for pdflatex
+% \input{glyphtounicode}
+
+% fontawesome
+\usepackage{fontawesome5}
+
+% fixed width
+\usepackage[scale=0.90,lf]{FiraMono}
+
+% light-grey
+\definecolor{light-grey}{gray}{0.83}
+\definecolor{dark-grey}{gray}{0.3}
+\definecolor{text-grey}{gray}{.08}
+
+\DeclareRobustCommand{\ebseries}{\fontseries{eb}\selectfont}
+\DeclareTextFontCommand{\texteb}{\ebseries}
+
+% custom underilne
+\usepackage{contour}
+\usepackage[normalem]{ulem}
+\renewcommand{\ULdepth}{1.8pt}
+\contourlength{0.8pt}
+\newcommand{\myuline}[1]{%
+  \uline{\phantom{#1}}%
+  \llap{\contour{white}{#1}}%
+}
+
+
+% custom font: helvetica-style
+\usepackage{tgheros}
+\renewcommand*\familydefault{\sfdefault} 
+%% Only if the base font of the document is to be sans serif
+\usepackage[T1]{fontenc}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{0in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting - serif
+% \titleformat{\section}{
+%   \vspace{2pt} \scshape \raggedright\large % header section
+% }{}{0em}{}[\color{black} \titlerule \vspace{-5pt}]
+
+% TODO EBSERIES
+% sans serif sections
+\titleformat {\section}{
+    \bfseries \vspace{2pt} \raggedright \large % header section
+}{}{0em}{}[\color{light-grey} {\titlerule[2pt]} \vspace{-4pt}]
+
+% only for pdflatex
+% Ensure that generate pdf is machine readable/ATS parsable
+% \pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-1pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & {\color{dark-grey}\small #2}\vspace{1pt}\\ % top row of resume entry
+      \textit{#3} & {\color{dark-grey} \small #4}\\ % second row of resume entry
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+      #1 & {\color{dark-grey}} \\
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+% CHANGED default leftmargin  0.15 in
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{0pt}}
+
+\color{text-grey}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge Yu Lun Hsu} \\ \vspace{5pt}
+    \small \faPhone* \texttt{(+886) 908119998} \hspace{1pt} $|$
+    \hspace{1pt} \faEnvelope \hspace{2pt} \href{mailto:alan890104@gmail.com}{\texttt{alan890104@gmail.com}} \hspace{1pt} $|$ 
+    \hspace{1pt} \faGithub \hspace{2pt} \href{https://github.com/alan890104}{\texttt{alan890104}} \hspace{1pt} $|$
+    \hspace{1pt} \faLinkedin \hspace{2pt} \href{https://www.linkedin.com/in/%E5%BE%90%E7%85%9C%E5%80%AB/}{\texttt{Yu Lun Hsu}}
+    \\ \vspace{-3pt}
+\end{center}
+
+%-----------EXPERIENCE-----------
+\section{EXPERIENCE}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {NYCU ITSC System Development Team}{July. 2021 -- Present}
+      {Full-stack Engineer, Architecture Designer}{Golang, MySQL, Docker, Vue.js}
+      \resumeItemListStart
+        \resumeItem{Light-weight and microservice-like system architecture design for Institute of Public Health}
+        \resumeItem{Conduct stress test for optimizing API server; \textbf{increased rate of request by 200\%}}
+        \resumeItem{Introduce \textbf{CI/CD pipeline and containerized service} with gitOps to boost productivity by 50\% }
+        \resumeItem{Integrate \textbf{AWS S3} into resource server and \textbf{MySQL} backup routine}
+        \resumeItem{Build backend api and database service in Golang, design UI by Figma, and implement frontend via Vue.js}
+        \resumeItemListEnd
+
+    \resumeSubheading
+      {\href{https://www.cs.nycu.edu.tw/members/detail/pinghsieh}{Reinforcement Learning and Bandits Lab}}{July. 2020 -- Jan. 2022}
+      {Undergraduate Researcher}{Python, RL, Algorithm}
+      \resumeItemListStart
+        \resumeItem{\textbf{Undergraduate research fellowship, Ministry of Science and Technology (Most), Taiwan}}
+        \resumeItem{Analysis on the overestimation over Distributional Deep Q Network (Implicit Quantile Network)}
+
+    \resumeItemListEnd
+
+    \resumeSubheading
+      {College of Management, NYCU}{Mar. 2020 -- Jan. 2022}
+      {Researcher, Teach Assistant}{Python, Matlab}
+      \resumeItemListStart
+        \resumeItem{Time series prediction via variant of Lotka-Volterra model of energy consumption}
+        \resumeItem{Automate whole research pipeline to enhance productivity}
+        \resumeItem{Build private web service for sharing executable programs over lab members}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------Awards-----------
+\section {AWARDS \& CERTIFICATIONS}
+
+  \resumeSubHeadingListStart
+  \resumeSubheading
+    {Academic  Achievement  Award}{}
+    {Ranked TOP 1 in Department of Computer Science}{}
+  \resumeSubHeadingListEnd
+  
+  \resumeSubHeadingListStart
+  \resumeSubheading
+    {Undergraduate research fellowship, Ministry of Science and Technology}{}
+    {Senior project: On the Overestimation Bias of Distributional Reinforcement Learning }{}
+  \resumeSubHeadingListEnd
+
+  \resumeSubHeadingListStart
+  \resumeSubheading
+    {NI Certified LabVIEW Associate Developer}{}
+    {LabVIEW developer certification}{}
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+
+\section{PROJECTS}
+    \resumeSubHeadingListStart
+        \resumeProjectHeading
+          {\textbf{Detection of Ponzi Scheme in Smart Contract} \href{https://github.com/WaterSo0910/ponzi-detector/tree/bytecode}{\faGithub}}{}
+          \resumeItemListStart
+            \resumeItem{Perform better preprcessing to improve f1-score up to 0.12 than \href{https://ieeexplore.ieee.org/document/8668768}{\underline{this IEEE paper}}}
+            \resumeItem{Implement a frontend UI to copy, paste and detect OPcode of smart contract}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+    \resumeSubHeadingListStart
+        \resumeProjectHeading
+          {\textbf{Ablation of Implicit Quantile Network} \href{https://github.com/alan890104/RL-TeamProject/blob/master/report.pdf}{\faFilePdf}}{}
+          \resumeItemListStart
+            \resumeItem{Find and evaluate the important factor in IQN.}
+            \resumeItem{Elaborate the reason why IQN is better than QR-DQN}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+    \resumeSubHeadingListStart
+        \resumeProjectHeading
+          {\textbf{Bitcoin Trader} \href{https://arxiv.org/abs/1707.06347}{\faFile}}{}
+          \resumeItemListStart
+            \resumeItem{Utilize reinforcement learning method (PPO) to automatically trade on Binance and gain \textbf{400\% profit rate} }
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+
+
+%-----------EDUCATION-----------
+\section {EDUCATION}
+  \resumeSubHeadingListStart
+  \resumeSubheading
+    {Institute of Computer Science and Engineering}{Sep. 2022 -- }
+    {National Yang Ming Chiao Tung University}{Master Degree}
+  \resumeSubHeadingListEnd
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Department of Computer Science}{Sep. 2018 -- June. 2022}
+      {National Yang Ming Chiao Tung University}{Bachelor Degree}
+  \resumeSubHeadingListEnd
+
+
+%
+%-----------PROGRAMMING SKILLS-----------
+\section{SKILLS}
+ \begin{itemize}[leftmargin=0in, label={}]
+    \small{\item{
+     \textbf{Languages} {: Golang, Python, JavaScript (Vue.js, React.js), HTML/CSS, SQL (MySQL, SQLite)}\vspace{2pt} \\
+     \textbf{Ability}   {: Git, DevOps, ML , RL, DL}
+    }}
+ \end{itemize}
+
+
+%-------------------------------------------
+\end{document}
