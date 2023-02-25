@@ -1,7 +1,7 @@
 %-------------------------
 % Resume in Latex
-% Author : Harshibar
-% Based off of: https://github.com/jakeryang/resume
+% Author : Alan Hsu
+% Based off of: https://github.com/alan890104/Resume
 % License : MIT
 %------------------------
 
@@ -149,13 +149,18 @@
 \section{EXPERIENCE}
   \resumeSubHeadingListStart
     \resumeSubheading
+        {Blockchain Data Analyst of Information Security, AmberGroup}{July. 2022 -- Present}
+        {Internship}{Ethereum}
+        \resumeItemListStart
+        \resumeItem{Have been dedicated to conduct research on Anomaly Transaction Detection}
+        \resumeItemListEnd
+    \resumeSubheading
       {NYCU ITSC System Development Team}{July. 2021 -- Present}
       {Full-stack Engineer, Architecture Designer}{Golang, MySQL, Docker, Vue.js}
       \resumeItemListStart
         \resumeItem{Light-weight and microservice-like system architecture design for Institute of Public Health}
-        \resumeItem{Conduct stress test for optimizing API server; \textbf{increased rate of request by 200\%}}
-        \resumeItem{Introduce \textbf{CI/CD pipeline and containers} with gitOps to boost productivity by 50\% }
-        \resumeItem{Integrate \textbf{AWS S3} into resource server and \textbf{MySQL} backup routine}
+        \resumeItem{Introduce CI/CD pipeline and containers with gitOps to boost productivity by 50\% }
+        \resumeItem{Integrate AWS S3 into resource server and MySQL backup routine}
         \resumeItem{Build backend api and database service in Golang, design UI by Figma, and implement frontend via Vue.js}
         \resumeItemListEnd
 
@@ -207,6 +212,15 @@
 \section{PROJECTS}
     \resumeSubHeadingListStart
         \resumeProjectHeading
+          {\textbf{Tornado Crash - Deanonymizing Non-Custodial Mixer} \href{https://github.com/am13-lab/tornado-crash}{\faGithub}}{}
+          \resumeItemListStart
+            \resumeItem{Leverage graphDB to optimize calculating process and reduce computation time}
+            \resumeItem{Design a general format for important features as analyzing Tornado Cash}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+    
+    \resumeSubHeadingListStart
+        \resumeProjectHeading
           {\textbf{Detection of Ponzi Scheme in Smart Contract} \href{https://github.com/WaterSo0910/ponzi-detector/tree/bytecode}{\faGithub}}{}
           \resumeItemListStart
             \resumeItem{Perform better preprocessing to improve f1-score up to 0.12 than \href{https://ieeexplore.ieee.org/document/8668768}{\underline{this IEEE paper}}}
@@ -225,7 +239,7 @@
 
     \resumeSubHeadingListStart
         \resumeProjectHeading
-          {\textbf{Bitcoin Trader} \href{https://arxiv.org/abs/1707.06347}{\faFile}}{}
+          {\textbf{CEX Trader}}
           \resumeItemListStart
             \resumeItem{Utilize proximal policy optimization algorithms (PPO) to automatically trade on Binance and gain \textbf{400\% profit rate} }
           \resumeItemListEnd
@@ -252,8 +266,8 @@
 \section{SKILLS}
  \begin{itemize}[leftmargin=0in, label={}]
     \small{\item{
-     \textbf{Languages} {: Golang, Python, JavaScript (Vue.js, React.js), HTML/CSS, SQL (MySQL, SQLite), Matlab}\vspace{2pt} \\
-     \textbf{Ability}   {: Git, DevOps, ML, RL, DL}
+     \textbf{Languages} {: Golang, Python, JavaScript (Vue.js, React.js), HTML/CSS, SQL (MySQL, Postgres), Matlab, Solidity}\vspace{2pt} \\
+     \textbf{Ability}   {: Git, DevOps, ML, RL, DL, Graph, DataMining}
     }}
  \end{itemize}
 
